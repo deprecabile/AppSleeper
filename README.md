@@ -4,11 +4,13 @@ App Android in Kotlin e Jetpack Compose. La versione iniziale mostra «AppSleepe
 
 ## Requisiti
 
-- JDK 25
-- Android SDK Platform 37.0 (Android 17) e Build Tools compatibili con AGP 9.5.0
-- Android Studio Rabbit 2 o una versione che supporti AGP 9.5.0
+- JDK 25 con vendor Oracle, come la distribuzione OpenJDK di Oracle
+- Android SDK Platform 37.0 (Android 17) e Build Tools compatibili con AGP 9.5.1
+- Android Studio Rabbit 2 o una versione che supporti AGP 9.5.1
 
 Il progetto usa il wrapper Gradle 9.9.1 incluso nel repository. Configura il percorso dell'Android SDK tramite `ANDROID_HOME` o un file `local.properties` con `sdk.dir`.
+
+I requisiti Java del daemon sono definiti in `gradle/gradle-daemon-jvm.properties`, da conservare nel repository. Gradle usa questi criteri sia dall'IDE sia dal terminale: cerca un JDK compatibile installato e, se manca, può scaricare OpenJDK dagli URL configurati tramite Foojay. Il vendor `ORACLE` identifica anche le build OpenJDK di Oracle.
 
 ## Compilazione
 
